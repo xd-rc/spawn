@@ -1,7 +1,7 @@
 [build]
      base = "spawn-icu"
      command = "npm run build"
-     publish = "spawn-icu/.next"
+     publish = ".next"
 
    [[plugins]]
      package = "@netlify/plugin-nextjs"
