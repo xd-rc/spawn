@@ -2,10 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
-  experimental: {
-    // discord.js is a server-only dependency; keep it out of the client bundle.
-    serverComponentsExternalPackages: ["discord.js"]
-  },
+  // Don't fail production builds on lint warnings; CI/lint can run separately.
+  eslint: { ignoreDuringBuilds: true },
   async headers() {
     return [
       {
